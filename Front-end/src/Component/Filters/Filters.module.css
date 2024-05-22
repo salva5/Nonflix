@@ -1,0 +1,25 @@
+.filters {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+.filters button {
+    border-radius:5px;
+    height: 2rem;
+    width: 6.5rem;
+    align-self: center;
+    font-weight: 500;
+    border: 1px;
+    background-color: #00B9AE;
+    cursor: pointer;
+}
+.filters select {
+    width: 6rem;
+    border: 0;
+    border-radius: 5px;
+    height: 2rem;
+}
+.filters select, .filters select option {
+    color: black;
+}

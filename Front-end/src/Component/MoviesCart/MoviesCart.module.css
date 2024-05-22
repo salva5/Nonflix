@@ -1,0 +1,24 @@
+.divMoviesCart {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   color: #f3f3f3;
+}
+.divMoviesCart img {
+    height: 10rem;
+}
+.title, .title:visited, .title:hover, .title:after {
+    color:#f3f3f3;
+    text-decoration: none;
+}
+
+.divMoviesCart button {
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: 5rem;
+    align-self: center;
+    font-weight: 600;
+    border: 1px;
+    background-color: #00B9AE;
+    cursor: pointer;
+}

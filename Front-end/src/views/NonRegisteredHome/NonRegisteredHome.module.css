@@ -1,0 +1,12 @@
+
+.main {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.homeSlider img {
+    width: 1286px;
+    height: 350px;
+}
+

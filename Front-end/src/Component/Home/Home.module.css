@@ -1,0 +1,18 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+}
+.center{
+  margin-left: 254px;
+  width: 80%;
+  background-color: #21242D;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    margin-top: 2rem;
+    
+}
