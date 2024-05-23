@@ -60,8 +60,6 @@ const Register = () => {
             return errors;
           }}
           onSubmit={handleRegister}
-           
-            
         >
           {({
             values,
