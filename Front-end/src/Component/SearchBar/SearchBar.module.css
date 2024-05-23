@@ -25,3 +25,22 @@
 .search_div input {
     color: black
 }
+@media screen and (max-width: 450px) {  
+  .search_input{
+    width: 135px;
+    border-radius: 0.5rem;
+    height: 2rem;
+    border: 0;
+    padding: 10px;
+}
+.search_div button {
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 5rem;
+  align-self: center;
+  font-weight: 500;
+  border: 1px;
+  background-color: #00B9AE;
+  cursor: pointer;
+}
+}
