@@ -69,3 +69,11 @@
     background-color: #00B9AE;
     cursor: pointer;
   }
+
+  @media screen and (max-width:450px) {
+    .flipCard {
+      background-color: transparent;
+      width: 7rem;
+      height: 10rem;
+    }
+  }
