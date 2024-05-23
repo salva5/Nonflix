@@ -11,3 +11,13 @@
 .pagination div:hover, .pagination .actual {
     color:#00B9AE
 }
+
+
+@media screen and (max-width: 450px) {  
+  .pagination {
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 2rem 0;
+    font-size: x-small;
+}
+}
