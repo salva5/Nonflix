@@ -19,6 +19,8 @@
   border-radius: 15px;
   padding-top: 5px;
   gap: 5px;
+  padding: 2rem;
+  text-align: center;
 }
 .container form {
   display: flex;
@@ -48,4 +50,10 @@
   background-color: #00b9ae;
   cursor: pointer;
   align-self: center;
+}
+
+@media screen and (max-width:450px){
+  .container  .formContainer{
+    margin: 3rem;
+  }
 }
