@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 .main .menu h3 {
     color: #A4A5A9;
@@ -61,4 +61,13 @@ a.activeLink, .selected {
     padding-top: 0.2rem;
   }
   
-
+@media screen and (max-width:450px) {
+  .main{
+    width: 140px;
+    font-size: 13px;
+  }
+  .logo img {
+    width: 6rem;
+}
+  
+}
