@@ -3,6 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const { Sequelize } = require('sequelize');
 
+const pg = require("pg")
+
+const { Pool } = pg;
+
+const pool = new Pool({
+  connectionString: process.env.POSTGRES_URL,
+})
 
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_DEPLOY } = process.env;
 
