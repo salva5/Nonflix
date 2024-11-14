@@ -8,7 +8,6 @@ import ImagesGallery from '../../Component/ImagesGallery/ImagesGallery';
 const NonRegisteredHome = () =>  {
     return (
       <div className={style.main}>
-        <LogInMenu />
         {/* <CarouselProvider
         naturalSlideWidth={70}
         naturalSlideHeight={20}

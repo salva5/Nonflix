@@ -8,7 +8,7 @@ import 'swiper/css/scrollbar';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import { Autoplay, Navigation} from "swiper/modules"
 import style from './ImagesGallery.module.css'
-
+import LogInMenu from '../LogInMenu/LogInMenu';
 
 export default function ImagesGallery() {
 
@@ -24,25 +24,23 @@ export default function ImagesGallery() {
 
   return (
     <div className={style.swiper}>
-
+      <LogInMenu />
       <Swiper
-        
         modules={[Autoplay, Navigation]}
         slidesPerView={1}
         pagination={{clickable: true}}
         autoplay
-        navigation
       >
-          {data.map((item)=> (
-            <SwiperSlide key={item.id} className={style.slideItem}>
-              <img
+        {data.map((item)=> (
+          <SwiperSlide key={item.id} className={style.slideItem}>
+            <img
               className={style.img}
               src={item.image}
               alt='Slider'
               
-              />
-            </SwiperSlide>
-          ))}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
 
 
