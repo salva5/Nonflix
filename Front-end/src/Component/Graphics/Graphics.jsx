@@ -43,7 +43,7 @@ const Graphics = () => {
 
   return (
     <div className="flex flex-row">
-      <AdminSideBar></AdminSideBar>
+      
       <div className="dashboard" style={{width:"80%", marginLeft:"229px"}}>
         <Card className=" ml-8 bg-gray-800">
           <Title className="text-center text-xl text-teal-400">Graphics</Title>

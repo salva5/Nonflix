@@ -90,7 +90,7 @@ const DashBoard = () => {
   
   return (
     <div className="flex flex-row">
-      <AdminSideBar></AdminSideBar>
+      
       <div className="dashboard">
         <Card className=" dashboard-card ml-8 bg-gray-800">
           <Title className="text-center text-xl text-teal-400">

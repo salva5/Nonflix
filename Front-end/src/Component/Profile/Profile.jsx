@@ -78,8 +78,6 @@ const Profile = () => {
   
   return (
     <div className={style.main}>
-      {userData.admin ? <AdminSideBar /> : <SideBar />
-}
       <div className={style.profile}>
         <h2>
           Hi <label className={style.name}>{userFirstName[0]}</label>, welcome

@@ -15,7 +15,7 @@ const NotFound = () => {
 
     return(
         <div className={style.main}>
-        <SideBar />
+        
         <div className={style.notFound}>
             <h1>Oops! Page not found</h1>
             <h2>404 Error</h2>

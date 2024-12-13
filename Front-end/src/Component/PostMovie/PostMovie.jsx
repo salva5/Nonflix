@@ -138,7 +138,7 @@ const PostMovie = () => {
 
   return (
     <div className={style.globalContainer}>
-      <AdminSideBar />
+      
       <div className={style.createMovieContainer}>
         <div className={style.h1}>
           <h1 className={style.h1}>Add new movie to catalog</h1>

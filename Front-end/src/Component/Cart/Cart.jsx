@@ -29,7 +29,6 @@ const Cart = () => {
 
   return (
     <div className={style.main}>
-      <SideBar />
       <div className={style.divCart}>
         <div className={style.backButtonContainer}>
           <BackButton />

@@ -18,12 +18,12 @@ import {
 import { useEffect, useState } from "react";
 
 const SideBar = () => {
-  const dispatch = useDispatch();
+  const [selectedGenre, setSelectedGenre] = useState("");
   const stateFilterParams = useSelector((state) => state.filterParameters);
   const Cart = useSelector((state) => state.Cart);
-  const [selectedGenre, setSelectedGenre] = useState("");
   const genres = useSelector((state) => state.genres);
   const userData = useSelector((state) => state.user);
+  const dispatch = useDispatch();
   const userFirstName = userData.name.split(" ");
 
   useEffect(() => {

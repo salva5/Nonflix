@@ -32,7 +32,7 @@ const Orders = () => {
 
   return (
     <div className="flex flex-row">
-      <AdminSideBar></AdminSideBar>
+      
       <div className={style.orders}>
         <Card className=" ml-8 bg-gray-800" style={{minHeight:"100vh"}}>
           <Title className="text-center text-xl text-teal-400">

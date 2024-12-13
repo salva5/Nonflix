@@ -2,6 +2,7 @@ import Filters from "../Filters/Filters";
 import ListCards from "../ListCards/ListCards";
 import SearchBar from "../SearchBar/SearchBar";
 import SideBar from "../SideBar/SideBar";
+import Cart from "../Cart/Cart";
 import style from "./Home.module.css";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -53,9 +54,8 @@ const Home = () => {
   
   return (
     <div className={style.home}>
-      <SideBar/>
-      {notification.isOpen && toast.success(notification.message) && <ToastContainer limit={1} autoClose={3000} position= "bottom-right"/>}
       
+      {notification.isOpen && toast.success(notification.message) && <ToastContainer limit={1} autoClose={3000} position= "bottom-right"/>}
       <div className={style.center}>
         <div className={style.header}>
           <Filters />

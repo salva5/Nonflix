@@ -16,7 +16,7 @@ const LogInMenu = () => {
             <li>Register Now</li>
           </Link>
           <Link to="/Login">
-            <li>Log In</li>
+            <li>Login</li>
           </Link>
         </ul>
       </div>

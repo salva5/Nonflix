@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 import { cleanFavs, getFavs, getMovies } from "../../Redux/actions/actions";
 import style from "./Favorites.module.css";
 import Pagination from "../Pagination/Pagination";
-import SideBar from "../SideBar/SideBar";
+
 import brokenHeart from "../../assets/brokenheart2.png";
 
 const Favorites = () => {
