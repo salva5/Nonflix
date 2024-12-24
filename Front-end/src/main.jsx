@@ -7,22 +7,23 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "./Redux/store.js";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 
-//axios.defaults.baseURL = "http://localhost:3001";
+/* axios.defaults.baseURL = "http://localhost:3001"; */
 
 axios.defaults.baseURL = 'https://nonflix-backend-production.up.railway.app';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter>
-        <React.StrictMode>
-          <GoogleOAuthProvider clientId="176801974472-rlnchhhjsmsna5ifp1rf92aeuevko5nh.apps.googleusercontent.com">
-            <App />
-          </GoogleOAuthProvider>
-        </React.StrictMode>
-      </BrowserRouter>
-    </PersistGate>
-  </Provider>
+   <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+         <BrowserRouter>
+            <React.StrictMode>
+               <GoogleOAuthProvider clientId="178803897339-8cr8bgd49up9iter2aokqel47s4ddi1t.apps.googleusercontent.com">
+                  <App />
+               </GoogleOAuthProvider>
+            </React.StrictMode>
+         </BrowserRouter>
+      </PersistGate>
+   </Provider>
 );
