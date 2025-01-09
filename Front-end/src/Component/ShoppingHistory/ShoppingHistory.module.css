@@ -1,42 +1,42 @@
 .divMain {
-    margin-top: 50px;
+   margin-top: 50px;
 }
 .title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
 }
 .title h2 {
-    margin-bottom: 0;
+   margin-bottom: 0;
 }
 .title .historyIcon {
-    height : 35px;
-    width: 35px;
-    margin-right: 5px;
+   height : 35px;
+   width: 35px;
+   margin-right: 5px;
 }
 .date {
-    margin: 1rem 0;
+   margin: 1rem 0;
 }
 .movies {
-    display: grid;
-    grid-template-columns: 1fr 2.9fr 1fr;
-    align-items:center
+   display: grid;
+   grid-template-columns: 1fr 2.9fr 1fr;
+   align-items:center
 
 }
 .movies img {
-    
-    height: 90px;
-    width: 70px;
-    margin: 5px;
+   
+   height: 90px;
+   width: 70px;
+   margin: 5px;
 }
 
 .shopMovie {
-    padding: 12px;
-    background-color: #696b6b61;
-    border-radius: 10px;
-    margin-top: 10px;
+   padding: 12px;
+   background-color: #696b6b61;
+   border-radius: 10px;
+   margin-top: 10px;
 }
 .shopMovie h4{
-    text-align: right;
-    margin-right: 5rem;
+   text-align: right;
+   margin-right: 5rem;
 }

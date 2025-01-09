@@ -1,12 +1,12 @@
 .leftButton {
-    float: left; /* Alinea el botón a la izquierda */
-    margin-right: 10px; /* Agrega un margen derecho opcional para separarlo de otros elementos */
-  }
+   float: left; /* Alinea el botón a la izquierda */
+   margin-right: 10px; /* Agrega un margen derecho opcional para separarlo de otros elementos */
+}
 
-  .displayedImage {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-  }
+.displayedImage {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   border: 2px solid #fff;
+   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}

@@ -1,7 +1,9 @@
 .orders {
-    width: 80%;
-    margin-left: 229px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
 .orders p {
-    margin-bottom: 1rem;
+   margin-bottom: 1rem;
 }

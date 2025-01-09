@@ -1,47 +1,44 @@
 .filters {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   justify-content: center;
 }
 .filters button {
-    border-radius:5px;
-    height: 2rem;
-    width: 6.5rem;
-    align-self: center;
-    font-weight: 500;
-    border: 1px;
-    background-color: #00B9AE;
-    cursor: pointer;
+   border-radius:0.5rem;;
+   height: 2.3rem;
+   width: 6.5rem;
+   border: 1px;
+   background-color: #00B9AE;
+   cursor: pointer;
 }
 .filters select {
-    width: 6rem;
-    border: 0;
-    border-radius: 5px;
-    height: 2rem;
+   width: 6rem;
+   border: 0;
+   border-radius: 5px;
+   height: 2.3rem;
+   color: black;
 }
-.filters select, .filters select option {
-    color: black;
-}
+
 @media screen and (max-width: 450px) {  
-  .filters select {
-    width: 4rem;
-    border: 0;
-    border-radius: 5px;
-    height: 2rem;
-    font-size: 12px;
-}
-.filters button {
-  border-radius:5px;
-  height: 2rem;
-  width: 4rem;
-  align-self: center;
-  border: 1px;
-  background-color: #00B9AE;
-  cursor: pointer;
-  font-size: 12px;
-}
-.filters h4 {
-  display: none;
-}
+   .filters select {
+      width: 4rem;
+      border: 0;
+      border-radius: 5px;
+      height: 2rem;
+      font-size: 12px;
+   }
+   .filters button {
+   border-radius:5px;
+   height: 2rem;
+   width: 4rem;
+   align-self: center;
+   border: 1px;
+   background-color: #00B9AE;
+   cursor: pointer;
+   font-size: 12px;
+   }
+   .filters h4 {
+   display: none;
+   }
 }

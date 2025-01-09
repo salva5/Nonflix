@@ -1,85 +1,88 @@
 .main {
-    display: flex;
+   background-color: #21242D;
+   color: white;
 }
 .profile {
-    background-color: #21242D;
-    margin-left: 2rem;
-    width: 79%;
-    padding: 3rem;
-    margin-left: 254px;
+   margin-left: 4rem;
+   padding: 8rem;
 }
-.profile h2 .name {
-    font-weight: bolder;
-}
-.important {
-    width: 27rem;
-    margin-top: 1rem;
-    font-size: small;
-    margin-bottom: 1rem;
-    border: 3px solid #00B9AE;
-    padding: 6px;
-}
-.important ul {
-    list-style: inside;
-    padding-left: 15px;
-}
-.labelPsw {
-    margin-top: 1rem;
-}
-.profile .data button {
-    margin-top: 1rem;
-}
-.check {
-    display: flex;
-    flex-direction: row;
-}
-.profile .check .checkbox {
-    width: 2rem;
-    margin-right: 1rem;
-}
-.profile button {
-    border-radius: 0.5rem;
-    height: 2.5rem;
-    width: 10rem;
-    margin-top: 5px;
-    align-self: center;
-    font-weight: 600;
-    border: 1px;
-    background-color: #00B9AE;
-    cursor: pointer;
-    margin-left: -200px;
-}
-.profile img {
-    width: 10rem;
-    border-radius: 10px;
-}
-.profile label, .color {
-    color: #00B9AE;
-}
-.profile form {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-.profile input {
-    border-radius: 5px;
-    height: 2.2rem;
-    width: 18rem;
-    border: 1px;
-    color: black;
-    padding-left: 5px;
-}
-.data .errors {
-    font-size: small;
-    color: yellow;
-    margin-bottom: 1rem;
-    width: 20rem;
-    margin-left: 3rem;
-}
-.data {
-    display: flex;
-    flex-direction: column;
+.name {
+   font-weight: bolder;
 }
 .profile h2 {
-    font-size: larger;
-    margin-bottom: 1rem;
+   font-size: larger;
+   margin-bottom: 1rem;
 }
+.data {
+   display: flex;
+   flex-direction: column;
+   gap:5px
+}
+.data h3{
+   font-size: medium;
+}
+.data .errors {
+   padding-top: 5px;
+   font-size: small;
+   color: yellow;
+   margin-bottom: 1rem;
+   width: 20rem;
+   margin-left: 3rem;
+}
+.data button {
+   margin-top: 1rem;
+}
+.important {
+   margin-top: 1rem;
+   font-size: small;
+   margin-bottom: 1rem;
+   border: 3px solid #00B9AE;
+   padding: 1rem;
+}
+.important h3{
+   font-size:medium;
+}
+.important ul {
+   list-style: inside;
+   padding-left: 15px;
+}
+
+.check {
+   display: flex;
+}
+.check .checkbox {
+   width: 2rem;
+   margin-right: 1rem;
+}
+.profile button {
+   border-radius: 0.5rem;
+   height: 2.5rem;
+   width: 10rem;
+   margin-top: 5px;
+   align-self: center;
+   font-weight: 600;
+   border: 1px;
+   background-color: #00B9AE;
+   cursor: pointer;
+   margin-left: -200px;
+}
+.profile img {
+   width: 10rem;
+   border-radius: 10px;
+}
+.profile label, .color {
+   color: #00B9AE;
+}
+.profile form {
+   display: grid;
+   grid-template-columns: 50% 50%;
+}
+.profile input {
+   border-radius: 5px;
+   height: 2.2rem;
+   width: 18rem;
+   border: 1px;
+   color: black;
+   padding-left: 5px;
+}
+

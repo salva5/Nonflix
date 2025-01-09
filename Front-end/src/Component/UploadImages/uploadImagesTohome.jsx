@@ -5,7 +5,7 @@ export default function uploadImagesTohome() {
 
     // const cloudName = 'dy8pp1s5f'; 
     // const uploadPreset = 'imagenes_admins'; 
-  
+
     // const [imageUrl, setimageUrl] = useState(null);
     // const [imageAlt, setimageAlt] = useState(null);
 
@@ -26,38 +26,37 @@ export default function uploadImagesTohome() {
     //     widget.open();
     //   };
       
-    const [imageHome, setImageHome] = useState()
+      const [imageHome, setImageHome] = useState()
 
-    const cloudinaryRef = useRef();
-    const widgetRef = useRef()
-    
-    useEffect(()=>{
-        cloudinaryRef.current = window.cloudinary
-        widgetRef.current = cloudinaryRef.current.createUploadWidget({
-            cloudName: 'dy8pp1s5f',
-            uploadPreset: 'imagenes_admins'
-        }, function(error, result){
-          if (!error && result && result.event === 'success') {
-            const imageUrl = result.info.url;
-            setImageHome(imageUrl); 
-          }
-        })
-    }, [])
+      const cloudinaryRef = useRef();
+      const widgetRef = useRef()
+      
+      useEffect(()=>{
+         cloudinaryRef.current = window.cloudinary
+         widgetRef.current = cloudinaryRef.current.createUploadWidget({
+               cloudName: 'dy8pp1s5f',
+               uploadPreset: 'imagenes_admins'
+         }, function(error, result){
+            if (!error && result && result.event === 'success') {
+               const imageUrl = result.info.url;
+               setImageHome(imageUrl); 
+            }
+         })
+      }, [])
 
 
-  return (
-    <div>
-        uploadImagesTohome
-    
-        {/* <button type="button" className={styles.leftButton} onClick={openWidgetToHome}>
-            Upload Image to Home
-          </button> */}
-    
-    <button className={styles.leftButton} onClick={()=> widgetRef.current.open()}>
-                  Upload
-    </button>
-
-          <img src={imageHome}  />
-    </div>
-  )
+   return (
+      <div>
+         uploadImagesTohome
+      
+         {/* <button type="button" className={styles.leftButton} onClick={openWidgetToHome}>
+               Upload Image to Home
+            </button> */}
+      
+         <button className={styles.leftButton} onClick={()=> widgetRef.current.open()}>
+            Upload
+         </button>
+         <img src={imageHome}  />
+      </div>
+   )
 }

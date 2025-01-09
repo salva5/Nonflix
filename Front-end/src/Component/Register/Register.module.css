@@ -1,56 +1,87 @@
-.main {
-    color: #f3f3f3;
-    background-color: #21242D;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 26rem;
-    border-radius: 15px;
-    padding: 2rem;
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
 }
-.main form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-top: 1rem;
+.main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: #21242D;
+   border-radius: 15px;
+   padding: 4rem 2rem 2rem 2rem;
+   width: 30%;
 }
-.main form input {
-    border-radius: 5px;
-    height: 2.2rem;
-    width: 18rem;
-    border: 1px;
-    color: black;
-    padding-left: 5px;
+.main h2{
+   font-size: 1.8rem;
+   color: white;
 }
 .main p {
-    padding: 0 2rem;
-    text-align: center;
-    margin: 0;
+   color:#999999;
 }
-.main form button {
-    border-radius: 0.5rem;
-    height: 2.5rem;
-    width: 10rem;
-    margin-top: 5px;
-    align-self: center;
-    font-weight: 600;
-    border: 1px;
-    background-color: #00B9AE;
-    cursor: pointer;
+.registerForm {
+   display: flex;
+   flex-direction: column;
+   margin-top: 25px;
+   gap: 10px;
 }
-
-.profileImage{
-    margin-top: 15px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+.fields {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
 }
+.registerForm input{
+   border-radius: 5px;
+   height: 2.2rem;
+   width: 18rem;
+   border: 1px;
+   color: black;
+   padding-left: 5px;
+}
+.registerForm span{
+   color: red;
+   font-size: 15px;
+   padding-left: 2px;
+}
+.registerForm button{
+   border-radius: 0.5rem;
+   height: 2.5rem;
+   width: 10rem;
+   font-weight: 600;
+   background-color: #00b9ae;
+   cursor: pointer;
+   margin-top: 10px;
+   align-self: center;
+}
+.loginLink {
+   display: inline-block;
+   margin-top: 15px;
+}
+.loginLink a{
+   text-decoration: none;
+   color: white;
+}
+.loginLink a:hover {
+   color:#00b9ae
+}
+/* .profileImage{
+      margin-top: 15px;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+} */
 
 @media screen and (max-width: 450px){
-  .main{
-    margin:3rem
-  }
-}
+   .container {
+      height: 85vh;
+   }
+   .main{
+      width: 80%;
+   }
+} 

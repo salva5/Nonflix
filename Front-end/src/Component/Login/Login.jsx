@@ -1,121 +1,82 @@
-import React, { useState } from "react";
-import Style from "./Login.module.css";
-import Validation from "../Validation/Validation";
-import LogInMenu from "../LogInMenu/LogInMenu";
-import { Link, useNavigate } from "react-router-dom/dist";
+import React from "react";
+import styles from "./Login.module.css";
+import { NavLink, useNavigate } from "react-router-dom/dist";
 import { Formik } from "formik";
 import GoogleAuth from "../GoogleAuth/GoogleAuth";
 import { login as loginAction } from "../../Redux/actions/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import validations from "../Profile/validations";
 
 const Login = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+   const navigate = useNavigate();
+   const dispatch = useDispatch();
 
-  const user = useSelector((state)=> state.user);
-
-  const [login, setLogin] = useState({
-    email: "",
-    password: "",
-  });
-
-  const [error, setError] = useState({
-    email: "",
-    password: "",
-  });
-  const loginUser = (values) => {
-    dispatch(loginAction(values)).then((response) => {
-      if (response !== "" && response !== undefined) {
-        navigate("/Home");
-      }
-      // user.admin ? navigate('/Dashboard') : navigate('/Home')
-    });
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setLogin({
-      ...login,
-      [name]: value,
-    });
-    setError(
-      Validation({
-        ...error,
-        [name]: value,
-      })
-    );
-  };
-
-
-
-
-  return (
-    <div className={Style.container}>
-      <LogInMenu />
-      <div className={Style.formContainer}>
-        <h2>Log In</h2>
-        <p>Use your credentials to start enjoying!</p>
-        <Formik
-          initialValues={{ email: "", password: "" }}
-          validate={(values) => {
-            const errors = {};
-
-            if (!values.email) {
-              errors.email = "Required";
-            } else if (
-              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            ) {
-              errors.email = "Invalid email address";
+   const loginUser = (values) => {
+      dispatch(loginAction(values))
+      .then((response) => {
+         if (response !== "" && response !== undefined) {
+            navigate("/Home");
+         }
+         // user.admin ? navigate('/Dashboard') : navigate('/Home')
+      });
+   };
+   return (
+      <div className={styles.container}>
+         <div className={styles.formContainer}>
+            <h2>Login</h2>
+            <p>Welcome back! Sign in to your account to start enjoying!</p>
+            <Formik
+               initialValues={{name:"nameDefault", email: "", password: ""}}
+               validate = {validations}
+               onSubmit = {loginUser}
+            >
+            {
+               ({
+                  values,
+                  errors,
+                  touched,
+                  handleChange,
+                  handleBlur,
+                  handleSubmit
+               }) => (
+                  <form onSubmit={handleSubmit} className={styles.form}>
+                     <div className={styles.fields}>
+                        <input
+                           type="email"
+                           name="email"
+                           onChange={handleChange}
+                           onBlur={handleBlur}
+                           value={values.email}
+                           placeholder="Email"
+                        />
+                        <input
+                           type="password"
+                           name="password"
+                           onChange={handleChange}
+                           onBlur={handleBlur}
+                           value={values.password}
+                           placeholder="Password"
+                        />
+                     </div>
+                     {
+                        touched.email && errors.email 
+                           ? (<span>{errors.email && touched.email && errors.email}</span>) 
+                           : touched.password && touched.password 
+                              ? (<span>{errors.password && touched.password && errors.password}</span>) 
+                              : null
+                     }
+                     <button type="submit">Sign in</button>
+                  </form>
+               )
             }
-
-            return errors;
-          }}
-          onSubmit={loginUser}
-        >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting,
-            /* and other goodies */
-          }) => (
-            <form onSubmit={handleSubmit} className={Style.form}>
-              <div className={Style.campos}>
-                <input
-                  type="email"
-                  name="email"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.email}
-                  placeholder="E-mail"
-                />
-                <input
-                  type="password"
-                  name="password"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.password}
-                  placeholder="Password"
-                />
-                <label>
-                  {errors.password && touched.password && errors.password}
-                </label>
-              </div>
-
-              <button type="submit">Log In</button>
-            </form>
-          )}
-        </Formik>
-        <GoogleAuth />
-        <p>
-          New to NonFlix? <Link to="/Register">Register Now!</Link>
-        </p>
+            </Formik>
+            <GoogleAuth />
+            <span className={styles.registerLink}>
+               New to NonFlix? <NavLink to="/Register">Register Now!</NavLink>
+            </span>
+         </div>
       </div>
-    </div>
-  );
+   );
 };
 
 export default Login;

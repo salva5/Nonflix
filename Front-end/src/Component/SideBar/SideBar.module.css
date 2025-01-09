@@ -30,6 +30,7 @@
 }
 .navMain span{
    display: flex;
+   align-items: center;
    gap: 0.5rem;
 }
 .menu{
@@ -82,7 +83,6 @@
    font-size: 13px;
    color: rgb(251, 255, 7);
    font-weight:bolder; 
-   padding-top: 0.2rem;
 }
 a.activeLink, .selected {
    color:#00B9AE !important;

@@ -1,27 +1,16 @@
 .home {
-    display: flex;
-    flex-direction: row;
-    gap: 0 20px;
-}
-.center{
-  margin-left: 254px;
-  width: 80%;
-  background-color: #21242D;
+   background-color: #21242D;
+   color: white;
 }
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1rem;
-    margin-top: 2rem;
-    
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   padding: 5rem 5rem 2rem 5rem;
 }
 @media screen and (max-width: 450px) {  
-  .center{
-    margin-left: 150px;
-  }
-  .header {
-    flex-direction: column-reverse;
-    gap: 2rem;
-  }  
+   .header {
+      flex-direction: column-reverse;
+      gap: 2rem;
+   }  
 }

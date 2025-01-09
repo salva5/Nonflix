@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/NONFLIX-LOGO.png";
 import styles from "./AdminSideBar.module.css";
+import logo from "../../assets/NONFLIX-LOGO.png";
 import homeIcon from "../../assets/round_home_white_24dp.png";
 import profileIcon from "../../assets/round_person_outline_white_24dp.png";
 import logOutIcon from "../../assets/round_logout_white_24dp.png";
 import ordersIcon from "../../assets/receipt_long_white_24dp.svg";
 import graphicsIcon from "../../assets/insights_white_24dp.svg";
+import movieIcon from "../../assets/movie_white_24dp.svg";
+import usersIcon from "../../assets/group_white_24dp.svg";
 import { useDispatch } from "react-redux";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -14,8 +16,6 @@ import {
    getGenres,
 } from "../../Redux/actions/actions";
 import { useEffect } from "react";
-import movieIcon from "../../assets/movie_white_24dp.svg";
-import usersIcon from "../../assets/group_white_24dp.svg";
 
 const AdminSideBar = () => {
    const dispatch = useDispatch();

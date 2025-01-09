@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 .dashboard{
-    text-align: center;
-    width: 82%;
-    color:#01a499;
-    font-size: x-large;
-    margin-top: 0%;
-    margin-left: 230px;
-    width: 100%;
-}
-.dashboard-card {
-  width: 96%
+   color:#01a499;
+   font-size: large;;
 }
 .actions {
-  display: flex;
-  gap: 10px;
+   display: flex;
+   gap: 10px;
+}
+.name{
+   color: rgb(107 114 128);
 }
 .small-alert {
-    max-width: 200px;
-    font-size: 9px;
-  }
+   max-width: 200px;
+   font-size: 9px;
+}
 
 .search{
-  background-color: #5adfd6;
+   background-color: #5adfd6;
 }

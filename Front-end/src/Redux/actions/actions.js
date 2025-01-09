@@ -300,29 +300,30 @@ export const registerUser = (values) => {
 };
 
 export const login = (userInfo) => {
-  return async (dispatch) => {
-    try {
-      const user = await axios.post(`/Nonflix/login/login`, userInfo);
+   console.log("login");
+   return async (dispatch) => {
+      try {
+         const user = await axios.post(`/Nonflix/login/login`, userInfo);
 
-      const userData = user.data;
-      if(userData.active){
-        return dispatch({
-          type: USER_DATA,
-          payload: userData,
-        });
+         const userData = user.data;
+         if(userData.active){
+            return dispatch({
+               type: USER_DATA,
+               payload: userData,
+            });
 
+         }
+      } catch (error) {
+         const errorMsg = error.response.data.error
+            ? error.response.data.error
+            : error.response.data;
+         Swal.fire({
+            title: "Oops!",
+            text: errorMsg,
+            icon: "error",
+         });
       }
-    } catch (error) {
-      const errorMsg = error.response.data.error
-        ? error.response.data.error
-        : error.response.data;
-      Swal.fire({
-        title: "Oops!",
-        text: errorMsg,
-        icon: "error",
-      });
-    }
-  };
+   };
 };
 export const updateUser = ({ id, name, password, token, image }) => {
   let reqBody;

@@ -1,44 +1,37 @@
-.containerCards{
-  display: flex;
-
+.home {
+   background-color: #21242D;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   gap: 2rem;
+   min-height: 100vh;
+}
+.home h1{
+   font-size: 1.8rem;
+   padding-top: 3rem;
 }
 .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 5rem;
-    margin: 22px 50px;
-}
-.home {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-.header {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-.favorites{
-  margin-left: 254px;
-    background-color: #21242D;
-    padding: 0 2rem;
-    width: 80%;
-    min-height: 100vh;
-}
-.containerFav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 5rem;
+   margin: 22px 50px;
 }
 .emptyfavorites {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid;
-    padding: 1rem;
-    color: #00B9AE;
-    font-size: larger;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 1px solid;
+   padding: 3rem;
+   color: #00B9AE;
+   gap: 1rem;
+}
+.emptyfavorites h2 {
+   font-size: 1.4rem;
 }
 .emptyfavorites img {
-    width: 10rem;
+   width: 10rem;
 }
+
+
