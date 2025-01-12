@@ -7,8 +7,9 @@ const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT, DB_DEPLOY } = process.e
 
 const sequelize = new Sequelize(
    /* `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`, */
-   `${DB_DEPLOY}`,
+   DB_DEPLOY,
    {
+      dialect:"postgres",
       logging: false, // set to console.log to see the raw SQL queries
       native: false, // lets Sequelize know we can use pg-native for ~30% more speed
    }
