@@ -12,6 +12,7 @@
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.11.2",
+    "@headlessui/tailwindcss": "^0.2.1",
     "@react-oauth/google": "^0.11.1",
     "@sweetalert2/theme-borderless": "^5.0.15",
     "@sweetalert2/theme-dark": "^5.0.15",
