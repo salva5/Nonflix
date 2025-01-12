@@ -1,5 +1,4 @@
 const validations = (values) => {
-   console.log(values);
    const errors = {}
    if(!values.name){
       errors.name = "Name is required"
